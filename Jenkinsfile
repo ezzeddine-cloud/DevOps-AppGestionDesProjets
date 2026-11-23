@@ -18,12 +18,6 @@ pipeline {
     }
 
     stages {
-        stage('Démonstration échec') {
-            steps {
-                sh 'echo "Echec volontaire pour tester l envoi du mail" && exit 1'
-            }
-        }
-
         stage('Récupérer le projet depuis GitHub') {
             steps {
                 checkout scm
